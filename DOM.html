@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document Object Manipulation</title>
+
+<style>
+.highlight {
+    color: blue;
+    background-color: lightyellow;
+    padding: 10px;
+}
+#box{
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div id="box">
+
+<h2 id="heading">Welcome Student</h2>
+
+<p id="paragraph">This is Document Object</p>
+
+<img id="image"
+src="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk="
+width="300">
+
+<br><br>
+
+<a id="link" href="https://www.dreamstime.com/photos-images/rain-nature.html">
+Image
+</a>
+
+<br><br>
+
+<button onclick="changeContent()">Change Content</button>
+<button onclick="changeImage()">Change Image</button>
+<button onclick="changeLink()">Change Link</button>
+<button onclick="changeClass()">Change Class</button>
+
+
+</div>
+
+<script>
+
+function changeContent() {
+    document.getElementById("heading").innerHTML = "Hello Student!";
+    document.getElementById("paragraph").innerHTML =
+        "The content has been changed using JavaScript DOM.";
+}
+
+function changeImage() {
+    document.getElementById("image").src =
+"https://media.istockphoto.com/id/1419410282/photo/silent-forest-in-spring-with-beautiful-bright-sun-rays.webp?s=1024x1024&w=is&k=20&c=K8yBJVB-TtpPF1O2zOhVlzXECDxJsadlRrLf4gXXNkk="}
+
+function changeLink() {
+    let link = document.getElementById("link");
+
+    link.href = "https://www.google.com";
+    link.innerHTML = "Visit Google";
+}
+
+function changeClass() {
+    document.getElementById("box").classList.toggle("highlight");
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
