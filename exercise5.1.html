@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Operations</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">Original Heading</h1>
+
+    <p id="para">Original Paragraph</p>
+
+    <p id="text">Display Text</p>
+
+    <img id="image" src="https://media.istockphoto.com/id/1419410282/photo/silent-forest-in-spring-with-beautiful-bright-sun-rays.webp?s=1024x1024&w=is&k=20&c=K8yBJVB-TtpPF1O2zOhVlzXECDxJsadlRrLf4gXXNkk=" width="150">
+
+    <br><br>
+
+    <a id="link" href="https://www.google.com">Visit Website</a>
+
+    <br><br>
+
+    <button onclick="changeData()">Change</button>
+
+    <script>
+        function changeData() {
+
+            document.getElementById("heading").innerHTML =
+                "New Heading";
+
+            document.getElementById("para").innerText =
+                "New Paragraph";
+
+            document.getElementById("text").textContent =
+                "Text changed using textContent";
+
+            document.getElementById("text").style.color = "blue";
+            document.getElementById("text").style.fontSize = "25px";
+
+            document.getElementById("image").src =
+            "https://media.istockphoto.com/id/1442179368/photo/maldives-island.jpg?s=612x612&w=0&k=20&c=t38FJQ6YhyyZGN91A8tpn3nz9Aqcy_aXolImsOXOZ34=";
+
+            document.getElementById("link").href =
+                "https://www.youtube.com";
+            document.getElementById("link").innerText =
+                "Visit YouTube";
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
