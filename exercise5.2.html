@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Operations</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+        .newStyle {
+            color: blue;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">My Webpage</h1>
+
+    <p id="para">This is my paragraph.</p>
+
+    <img
+        id="image"
+        src="https://i.pinimg.com/originals/9c/b0/70/9cb070d62dc738a0c3a1a408d68e4af5.jpg"
+        width="150"
+        alt="Example image"
+    >
+
+    <br><br>
+
+    <a id="link" href="https://www.google.com" target="_blank">
+        Visit Google
+    </a>
+
+    <br><br>
+
+    <button type="button" onclick="changeHeading()">Heading</button>
+    <button type="button" onclick="changeParagraph()">Paragraph</button>
+    <button type="button" onclick="changeImage()">Image</button>
+    <button type="button" onclick="changeLink()">Link</button>
+    <button type="button" onclick="changeStyle()">Style</button>
+
+    <script>
+        function changeHeading() {
+            document.getElementById("heading").innerText =
+                "Welcome to JavaScript";
+        }
+
+        function changeParagraph() {
+            document.getElementById("para").innerText =
+                "Paragraph changed successfully!";
+        }
+
+        function changeImage() {
+            document.getElementById("image").src =
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfCS4cnA8w3NdU3hJCxO_MnKu-b-a6PFT8E5qx6GGXCAMS3zZztt0oGNQ&s=10";
+        }
+
+        function changeLink() {
+            const link = document.getElementById("link");
+
+            link.href = "https://www.youtube.com";
+            link.innerText = "Visit YouTube";
+        }
+
+        function changeStyle() {
+            document.body.style.backgroundColor = "lightblue";
+
+            document.getElementById("para").style.fontSize = "25px";
+
+            document.getElementById("heading").classList.add("newStyle");
+        }
+    </script>
+
+</body>
+</html>
