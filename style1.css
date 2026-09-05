@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(to right, lightblue, pink);
+    text-align: center;
+    font-family: Arial;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 40px;
+}
+
+p {
+    color: darkred;
+    font-family: Georgia;
+    font-size: 20px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: green;
+    transform: scale(1.1);
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: orange;
+    margin: 40px auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.box:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.rotate {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    color: white;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateBox 3s infinite;
+}
+
+@keyframes rotateBox {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
