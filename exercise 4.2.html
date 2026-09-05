@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function submitForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Please enter your email");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return false;
+        }
+
+        function clickEvent() {
+            alert("Submit button clicked!");
+        }
+
+        function mouseOver() {
+            document.getElementById("msg").innerHTML =
+                "Ready to submit!";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return submitForm()">
+
+        Name:
+        <input type="text" id="name">
+        <br><br>
+
+        Email:
+        <input type="email" id="email">
+        <br><br>
+
+        <button type="submit"
+                onclick="clickEvent()"
+                onmouseover="mouseOver()">
+            Submit
+        </button>
+
+        <p id="msg"></p>
+
+    </form>
+
+</body>
+</html>
